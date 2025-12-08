@@ -1,35 +1,44 @@
 #include <stdio.h>
-
 int main(){
 
-	char dot_line[] = "X";
-	int hash; 
-	int height = 8;
-	int len;
-	int base = 0;
-	int count = 0;
+	char dot_line[] = "#";
+	int hash, height, len;
+	int base = 0, count = 0;
+	 
+	printf("Height: ");
+	
+	scanf("%d",&height);
 
-	//use double for loop to fill space with x, later making it _
+	if (height <= base){	
+		
+		main();
+	}
+	else if (height > 8){
+		
+		main();
+	}
+	else {
+	height = height -1;	
 	while (height >= 0){
 		len = height;
 		
 		while (len >=  base) {
-				printf("x");
+				printf(" ");
 				
 				len --;	
 			}
 	
 	//creating the hashes	
-		count ++;		
+				
 		for (hash = 0; hash <= count; hash ++)	{
-				printf("#");
+				printf("%s",dot_line);
 			}
-
-			
-			
 			printf("\n");
 			height --;
-			
+			count ++;			
 	}
 
-}
+	}	
+		
+} 
+
